@@ -17,11 +17,11 @@
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+<body style="background-color:lightgray;">
+    <header style="background-color:lightsteelblue">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-controller="Movies" asp-action="Index">Movie App</a>
+                <a class="navbar-brand" asp-controller="Movies" asp-action="Index">Church Movies</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -37,14 +37,14 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div style="background-color:lightsteelblue;" class="container">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer style="background-color:lightsteelblue;" class="border-top footer text-muted">
         <div class="container">
             &copy; 2019 - Movie App - Hunter Utah <a asp-area="" asp-action="Privacy">Privacy</a>
         </div>

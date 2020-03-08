@@ -18,12 +18,9 @@
 
         Sort By:
 
-        <select asp-for="Time">
-            <option value="">Ascending</option>
-            <option value="">Descending</option>
-
+        <select asp-for="Time" asp-items="Model.TypeTime">
+            <option value="">All</option>
         </select>
-
         Title: <input type="text" asp-for="SearchString" />
         <input type="submit" value="Filter" />
 

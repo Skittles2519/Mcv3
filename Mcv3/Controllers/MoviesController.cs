@@ -19,13 +19,17 @@ namespace Mcv3.Controllers
         }
 
         // GET: Movies
-        public async Task<IActionResult> Index(string movieGenre, string searchString, string sortby)
+        public async Task<IActionResult> Index(string movieGenre, string sortby, string searchString)
         {
             // Use LINQ to get list of genres.
             IQueryable<string> genreQuery = from m in _context.Movie
                                             orderby m.Genre
                                             select m.Genre;
 
+            List<string> sorttypelist = new List<string>();
+
+            sorttypelist.Add("Ascending");
+            sorttypelist.Add("Descending");
            
 
             var movies = from m in _context.Movie
@@ -64,6 +68,7 @@ namespace Mcv3.Controllers
             var movieGenreVM = new MovieGenreViewModel
             {
                 Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                TypeTime = new SelectList(sorttypelist),
                 Movies = await movies.ToListAsync()
             };
 

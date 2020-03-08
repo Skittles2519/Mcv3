@@ -12,5 +12,7 @@ namespace Mcv3.Models
         public SelectList Genres { get; set; }
         public string MovieGenre { get; set; }
         public string SearchString { get; set; }
+        public string Time { get; set; }
+
     }
 }
